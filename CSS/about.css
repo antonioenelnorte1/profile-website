@@ -1,0 +1,202 @@
+
+body {
+
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.about-me { 
+  
+  background-image: url("/Images.index/aboutme.jpg"); 
+ 
+
+  
+  background-size:cover;
+  background-attachment: fixed; 
+}
+
+.designer {
+  background-image: url("/Images.index/des.jpg"); 
+  background-size:cover;
+  background-attachment: scroll; 
+}
+
+.programmer {
+  background-image: url("/Images.index/programIMG.jpeg"); 
+
+  background-size: 100%; 
+  background-attachment: fixed; 
+}
+
+.content {
+  text-align: center;
+  max-width: 800px;
+  padding: 50px;
+  background-color: rgb(226, 239, 248);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 800px;
+    padding-bottom: 800px;
+  }
+ 
+  .about-me {
+    /* Set the background image */
+    background-color: rgba(240, 248, 255, 0);
+    background-image: url(../Images.index/space.jpg);
+    background-attachment: fixed; 
+    background-size:100vh 100vh;
+    
+    
+  }
+  .designer {
+    
+    height: 50rem;
+    background-image: url("/Images.index/disng.png"); 
+    background-size:100vh 100vh;
+    background-attachment: fixed; 
+  }
+  .programmer {
+    height: 50rem; 
+    background-size:contain;
+    background-attachment: fixed;   
+    background-size:100vh 100vh;
+  }
+  .sun {
+    width: 230px;
+  height: 230px;
+  }
+  .earth {
+    width: 60px;
+  height: 60px;
+  }
+  .earth-blue {
+    width: 80px;
+    height: 80px;
+    
+  }
+  }
+  /* Solar System Container */
+.solar-system {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Sun */
+.sun {
+  background-image: url('/Images.index/sadsun.png'); /* Replace with URL of your red Earth image */
+  background-size: cover;
+  margin-top: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: sun-rotate 60s linear infinite; /* Adjust duration as needed */
+}
+
+/* Earths of Different Colors */
+.earth {
+  box-shadow: 0 0 50px yellow;
+  margin-top: 200px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.earth-blue {
+  background-image: url('/Images.index/wars.png'); /* Replace with URL of your red Earth image */
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  animation: earth-rotate-blue 20s linear infinite;
+}
+
+.earth-green {
+  background-image: url('/Images.index/venus.png'); /* Replace with URL of your red Earth image */
+  background-size: cover;
+  animation: earth-rotate-green 13s linear infinite;
+}
+
+.earth-red {
+  background-image: url('/Images.index/planet.png'); /* Replace with URL of your red Earth image */
+  background-size: cover;
+  
+  animation: earth-rotate-red 10s linear infinite;
+}
+
+/* Animations */
+@keyframes earth-rotate-blue {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg) translateY(-50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg) translateY(-50%);
+  }
+}
+
+@keyframes earth-rotate-green {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg) translateY(-50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(360deg) translateY(-50%);
+  }
+}
+
+@keyframes earth-rotate-red {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg) translateY(-50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(360deg) translateY(-50%);
+  }
+}
+@keyframes sun-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

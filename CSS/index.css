@@ -1,0 +1,199 @@
+/*in his way all the boxes will size exactly the Width, heigh*/ 
+*, *::before,*::after {
+  box-sizing: border-box;
+ }          
+ p  {
+	
+	text-align: left;
+	font-size: 30px;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	color: #666;
+  
+  }    
+ 
+       
+       /*Me picture*/
+        .yo {
+            width: 10vh;
+            height: 10vh;
+            border-radius: 100%;
+            position: relative;
+            animation-name: move;
+            animation-duration: 1.5s;
+            animation-iteration-count: initial;
+            animation-timing-function: linear;	
+        }
+        @keyframes move {
+          from {
+            left: -650px;
+          }
+          to {
+            left: 0px;
+          }
+        }
+
+        .menu {
+          background: linear-gradient(169deg, rgba(14,9,28,0.7651435574229692) 10%, rgba(0,0,0,1) 50%, rgba(89,57,186,0.6839110644257703) 90%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+               
+        }
+
+        .menubottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+        
+        .menu a, .menubottom a {
+            color: rgb(202, 0, 40);   
+            padding: 40px;
+            text-decoration: none;
+            font-size: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 0.5s forwards;    
+        }
+        .menu a:nth-child(odd) {
+          animation-delay: 0.1s;
+        }
+        
+        @keyframes slideIn {
+          0% {
+            opacity: 0;
+            transform: translateY(90px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media only screen and (max-width: 820px) {
+            .menu, .menubottom {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: wrap; 
+              font-size: 0.5rem;          
+            }
+        }                 
+            /*when you pass the mouse over the link// a:focus is use for when the user pass over the link with the tab key.*/
+            a:hover, a:focus, .menubottom a:hover{
+                color: rgb(255, 255, 255);
+                transform: translateY(-5px);
+                background-color: #ffffff13;
+                border-radius: 100px;
+           
+                
+     
+            }
+            #tab {
+              color: rgb(255, 255, 255);
+              text-decoration: underline;
+            }
+            
+  .skills {
+    font-family: 'Indie Flower';
+    background-color: rgb(42, 40, 40);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+    border: 1px solid rgb(92, 7, 73);
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.9);   
+    }
+  .skills li {
+    color: rgb(250, 246, 246);
+    -webkit-text-stroke: 0.4px rgb(140, 34, 34);
+    margin-left: 10px;        
+    border-right: 1px solid rgb(247, 244, 244);
+    padding: 0px 20px 0px 10px;
+    list-style: none;
+    font-size: 2.5vh;  
+                  
+  }
+  
+
+  @media only screen and (max-width: 820px) {
+    .skills {
+      flex-wrap: wrap;
+      margin-left: -25px;
+      
+      
+    }
+    
+    .skills li {
+      border-right: none;
+      margin: 15px 17px;
+      flex-basis: calc(40% - 50px);
+      /* set the width of each item to one third minus the margin */
+    }
+  }
+ 
+  /*FOOT*/
+  footer {
+    background: linear-gradient(169deg, rgba(14,9,28,0.7651435574229692) 10%, rgba(0,0,0,1) 50%, rgba(89,57,186,0.6839110644257703) 90%);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    
+  }
+  
+  .containerBottom {
+    max-width: 960px;
+    margin: 1vh auto;
+   
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;   
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 25px;
+    
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: translateY(-5px);
+    color: #FF3CAC;
+  }
+ .icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+ }
+ #ContactBottom {
+  text-align: center;
+  font-size: 3vh;
+  
+  color: rgb(152, 170, 228);
+ }
+ #copy {
+  text-align: center;
+    font-size: 1rem;
+    color: #fff;
+ }
+ 
+
+
+@media only screen and (max-width: 820px) {
+  .menubottom a {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+       
